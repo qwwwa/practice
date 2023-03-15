@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main()
+{
+	int num = 15;
+	if (num % 2 == 1)
+		printf("num为奇数\n");
+	else
+		printf("num为偶数\n");
+	return 0;
+}
