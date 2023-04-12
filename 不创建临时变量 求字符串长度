@@ -1,0 +1,19 @@
+#include<stdio.h>
+int my_strlen(char* str)
+{
+	if (*str != '\0')
+	  return 1 + my_strlen(str + 1);
+		//不建议使用++
+		//return 1 + my_strlen(str++); 不满足要求，先输出再++，输出是错误的
+		//return 1 + my_strlen(++str); 先++再使用，输出是正确的，留下来的是变了之后的值
+	else
+		return 0;
+}
+int main()
+{
+	char arr[] = "nihao";
+  
+	printf("%d\n", my_strlen(arr));
+  
+	return 0;
+}
